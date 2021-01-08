@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         editTextItem = findViewById(R.id.editTextItem);
         recycleViewItems = findViewById(R.id.recycleViewItems);
 
+        //for removing
         ItemsAdapter.OnLongClickListener onLongClickListener = new ItemsAdapter.OnLongClickListener(){
 
             @Override
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        ItemsAdapter itemsAdapter = new ItemsAdapter(items, onLongClickListener, onClickListener);
+        itemsAdapter = new ItemsAdapter(items, onLongClickListener, onClickListener);
         recycleViewItems.setAdapter(itemsAdapter);
         recycleViewItems.setLayoutManager(new LinearLayoutManager(this));
 

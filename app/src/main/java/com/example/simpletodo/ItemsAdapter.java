@@ -17,7 +17,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
     public interface OnClickListener{
         void onItemClicked(int position);
     }
-
+    //interface for removing functionality
     public interface OnLongClickListener{
         //To know which position you're long clicking at, notify the adapter of this
         void onItemLongClicked(int position);
@@ -79,6 +79,8 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
                     onClickListener.onItemClicked(getAdapterPosition());
                 }
             });
+
+            //for removing
             textViewItem.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
